@@ -17,7 +17,8 @@ if local_test == True:
 # ____________________
 
 #Import LLM - Langchain
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
+
 
 #Langchain Features
 from langchain.prompts import PromptTemplate
