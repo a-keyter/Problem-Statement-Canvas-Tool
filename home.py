@@ -47,7 +47,7 @@ if submit and problem != "":
     if local_test == False:
         openaikey = user_openai
     os.environ['OPENAI_API_KEY'] = openaikey
-    llm = OpenAI(temperature=0.4)
+    llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.7)
     
     customers_template = PromptTemplate(
         input_variables= ["problem"],
