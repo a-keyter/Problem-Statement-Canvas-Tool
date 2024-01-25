@@ -9,7 +9,7 @@ input_message = "Please enter your OpenAI API Key:"
 
 # TEST VERSION #
 cloud_test = True
-if local_test == True:
+if cloud_test == True:
     cloud_test = st.secrets['OPENAI_API_KEY']
     input_message = "Test Mode Enabled - Free to Use!"
 
@@ -50,7 +50,7 @@ problem = st.text_input("In a few words, try to state the problem you would like
 submit = st.button("Take Action!")
 
 if submit and problem != "":
-    if local_test == False:
+    if cloud_test == False:
         openaikey = user_openai
     os.environ['OPENAI_API_KEY'] = openaikey
     llm = OpenAI(model_name="gpt-3.5-turbo-0613", temperature=0.7)
