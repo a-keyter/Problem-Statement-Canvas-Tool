@@ -6,7 +6,7 @@ import io
 from docx import Document
 
 # TEST VERSION #
-local_test = False
+local_test = True
 if local_test == True:
     from apikeys import openaikey
 
