@@ -8,9 +8,9 @@ from docx import Document
 input_message = "Please enter your OpenAI API Key:"
 
 # TEST VERSION #
-local_test = True
+cloud_test = True
 if local_test == True:
-    from apikeys import openaikey
+    openaikey = st.secrets['OPENAI_API_KEY']
     input_message = "Test Mode Enabled - Free to Use!"
 
 # CLOUD VERSION #
@@ -38,7 +38,7 @@ with st.sidebar:
     st.write("This tool uses OpenAI 3.5 Turbo Completions")
     user_openai = st.text_input(input_message)
     st.divider()
-    st.write("This proof of concept tool is for use as a thought experiment only. Users agree to be critical of all model output. The creator of this application makes no claim to quality or veracity of any output text.")
+    st.write("This proof of concept tool is for use as a thought experiment only. Users agree to be critical of all model output. The creator of this application makes no claim to quality or veracity of any output text. Software provided as is. MIT License")
 
 st.header('Welcome to the Problem Statement Canvas') 
 st.write('This web app is a framework for rapidly identifying potential opportunities for business and commerce in our local communities and beyond.')
