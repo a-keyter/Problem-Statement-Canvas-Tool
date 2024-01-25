@@ -5,5 +5,4 @@ openapi-schema-pydantic==1.2.4
 langchain==0.0.178
 python-docx==0.8.11
 tiktoken==0.4.0
-langchain-openai
 
