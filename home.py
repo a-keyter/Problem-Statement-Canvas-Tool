@@ -10,7 +10,7 @@ input_message = "Please enter your OpenAI API Key:"
 # TEST VERSION #
 cloud_test = True
 if local_test == True:
-    openaikey = st.secrets['OPENAI_API_KEY']
+    cloud_test = st.secrets['OPENAI_API_KEY']
     input_message = "Test Mode Enabled - Free to Use!"
 
 # CLOUD VERSION #
